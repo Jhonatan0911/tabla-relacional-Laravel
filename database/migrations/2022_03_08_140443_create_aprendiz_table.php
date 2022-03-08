@@ -24,7 +24,7 @@ return new class extends Migration
 
             $table->foreignId('id_ficha')
                 ->nullable()
-                ->constrained('ficha')
+                ->constrained('fichas')
                 ->nullOnDelete()
                 ->cascadeOnUpdate();
 

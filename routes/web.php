@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AprendizController;
+use App\Http\Controllers\FichaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
-//ruta que devuelve la funcion de nuestro controlador relacion
-Route::get('/','App\Http\Controllers\Relacion@index');
+Route::resource('aprendiz',AprendizController::class);
+Route::resource('ficha',Fichacontroller::class);
+
